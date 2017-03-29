@@ -1,1 +1,1 @@
-console.log('Hello Server');
+import './config';
