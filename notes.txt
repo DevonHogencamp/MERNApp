@@ -1,0 +1,3 @@
+Backend start command: npm start
+
+Frontend start command: npm run dev
