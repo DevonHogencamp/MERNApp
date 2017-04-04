@@ -9,7 +9,15 @@ const App = (props) => {
     );
 };
 
+App.propTypes = {
+    headerMessage: React.PropTypes.string
+};
+
+App.defaultProps = {
+    headerMessage: 'Hi I am the default prop'
+};
+
 ReactDOM.render(
-    <App headerMessage="Hello Props" />,
+    <App/>,
     document.getElementById('root')
 );
