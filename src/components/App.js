@@ -1,21 +1,33 @@
 import React from 'react';
-import Header from './Header'
+import Header from './Header';
 
 
 class App extends React.Component {
-    constructor(props) {
+    state = {
+        pageHeader: 'Naming Contests'
+    };
 
+    componentDidMount() {
+        console.log('Did Mount');
+        debugger;
     }
 
-    return (
-        <div>
-            <Header message="Naming Contests"/>
+    componentWillMount() {
+        console.log('Will Mount');
+        debugger;
+    }
+
+    render() {
+        return (
             <div>
-                More of the things
+                <Header message={ this.state.pageHeader }/>
+                <div>
+                    { this.state.test }
+                </div>
             </div>
-        </div>
-    );
-};
+        );
+    }
+}
 
 App.defaultProps = {
     headerMessage: 'Hi I am the default prop'
