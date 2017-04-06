@@ -2,14 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
 
+import data from './testData.json';
+
 ReactDOM.render(
-    <App/>,
+    <App contests={data.contests}/>,
     document.getElementById('root')
 );
-
-setTimeout(() => {
-    ReactDOM.render(
-        <h2>I am the new element</h2>,
-        document.getElementById('root')
-    );
-}, 4000);
