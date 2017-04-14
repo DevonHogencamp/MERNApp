@@ -1,37 +1,27 @@
 import React from 'react';
 import Header from './Header';
 import ContestPreview from './ContestPreview';
-
+import ContestList from './ContestList';
 
 class App extends React.Component {
     state = {
-        pageHeader: 'Naming Contests'
+        pageHeader: 'Naming Contests',
+        contests: this.props.initialContests
     };
-
-    componentDidMount() {
-        // AJAX reqs
-    }
-
+    componentDidMount() {}
     componentWillMount() {
-        // shutdown timers, remove event handlers
     }
-
     render() {
+        debugger;
         return (
-            <div>
-                <Header message={ this.state.pageHeader }/>
-                <div>
-                    {this.props.contests.map((contest) =>
-                        <ContestPreview key={contest.id} {...contest}/>
-                    )}
-                </div>
+            <div className="App">
+                <Header message={this.state.pageHeader}/>
+                <ContestList contests={this.state.contests}/>
             </div>
-        );
+        )
     }
 }
-
-App.defaultProps = {
-    headerMessage: 'Hi I am the default prop'
+App.prototypes = {
+    initialContests: React.prototypes
 };
-
 export default App;

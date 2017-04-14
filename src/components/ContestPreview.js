@@ -1,17 +1,18 @@
 import React from 'react';
 
-const ContestPreview = (contest) => {
-    return (
-        <div className="ContestPreview">
-            <div className="category-name">
-                {contest.categoryName}
+class ContestPreview extends React.Component {
+    render() {
+        return (
+            <div className="ContestPreview">
+                <div className="category-name">
+                    {this.props.categoryName}
+                </div>
+                <div className="contest-name">
+                    {this.props.contestName}
+                </div>
             </div>
-
-            <div className="contest-name">
-                {contest.contestName}
-            </div>
-        </div>
-    );
-};
+        );
+    }
+}
 
 export default ContestPreview;
